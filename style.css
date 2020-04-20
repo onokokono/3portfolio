@@ -8,17 +8,17 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 @font-face {
     font-family: PopLight;
-    src: url(/fonts/Poppins-Light.ttf);
+    src: url(./fonts/Poppins-Light.ttf);
 }
 
 @font-face {
     font-family: PopMedium;
-    src: url(/fonts/Poppins-Medium.ttf);
+    src: url(./fonts/Poppins-Medium.ttf);
 }
 
 @font-face {
     font-family: PopRegular;
-    src: url(/fonts/Poppins-Regular.ttf);
+    src: url(./fonts/Poppins-Regular.ttf);
 }
 
 body {
