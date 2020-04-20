@@ -1,0 +1,300 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+@font-face {
+    font-family: PopLight;
+    src: url(/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: PopMedium;
+    src: url(/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PopRegular;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+
+body {
+    font-family: PopLight;
+}
+
+.portfolio {
+    color: white;
+    background: radial-gradient(#2B3760, #0B1023);
+}
+
+nav {
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+nav .menu {
+    width: 30px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.page {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.chef, .barber {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero {
+    overflow: hidden;
+    height: 500px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+}
+
+.hero a {
+    display: flex;
+}
+
+.hero img {
+    height: 400px;
+    transition: transform .3s ease-out;
+    cursor: pointer;
+}
+
+.model-right {
+    transform: translate(0%, 10%);
+}
+
+.model-left {
+    transform: translate(0%, -10%);
+}
+
+.hero:hover .model-right {
+    transform: translate(0%, 0%);
+}
+
+.hero:hover .model-left {
+    transform: translate(0, 0);
+}
+
+.details {
+    grid-column: 2/3;
+    align-self: flex-end;
+}
+
+.details h1 {
+    font-size: 54px;
+    font-family: PopRegular;
+}
+
+.details h2 {
+    font-size: 34px;
+    padding: 10px 0;
+}
+
+.details p {
+    font-size: 14px;
+    padding: 20px 0px 50px 0px;
+}
+
+.pages {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.pages>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pages h3 {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.pages svg {
+    cursor: pointer;
+    opacity: .5;
+    transform: scale(1.5);
+}
+
+.pages svg.active {
+    opacity: 1;
+}
+
+.pages svg:hover {
+    animation: dot .5s ease-in-out infinite alternate;
+}
+
+@keyframes dot {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+.banner {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.author {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.myStory, .myWork {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0px;
+}
+
+.storyDescription, .workDescription {
+    width: 50%;
+}
+
+.storyDescription h3, .workDescription h3 {
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-family: PopMedium;
+}
+
+.storyDescription p, .workDescription p {
+    padding: 20px 0px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.workGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    grid-template-rows: repeat(3, 170px);
+}
+
+.workGallery img {
+    width: 100%;
+}
+
+.nav-open{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 40vh;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(-100%);
+}
+
+.contact{
+    grid-column: 2/3;
+}
+.nav-open h3{
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.nav-open p{
+    font-size: 15px;
+}
+.social-links img{
+    padding: 0px 20px;
+}
+.logo,
+.menu{
+    z-index: 2;
+    cursor: pointer;
+}
+
+@media(max-width: 1080px) {
+    .page {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+    }
+    .hero {
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img {
+        height: 350px;
+    }
+    .details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .details h1 {
+        font-size: 34px;
+        font-family: PopRegular;
+    }
+    .details h2 {
+        font-size: 24px;
+        padding: 5px 0;
+    }
+    .details p {
+        font-size: 14px;
+        padding: 10px 0px 25px 0px;
+    }
+    .myStory, .myWork {
+        flex-direction: column;
+    }
+    .storyDescription, .workDescription {
+        width: 100%;
+    }
+    .workGallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(170px, 1fr));
+    }
+    .profile {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
