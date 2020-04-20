@@ -6,23 +6,9 @@
 
 html, body {margin: 0; height: 100%; overflow: hidden}
 
-@font-face {
-    font-family: PopLight;
-    src: url(./fonts/Poppins-Light.ttf);
-}
-
-@font-face {
-    font-family: PopMedium;
-    src: url(./fonts/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: PopRegular;
-    src: url(./fonts/Poppins-Regular.ttf);
-}
-
 body {
-    font-family: PopLight;
+    font-family: 'Poppins';
+    font-weight: 300;
 }
 
 .portfolio {
@@ -104,7 +90,8 @@ nav .menu {
 
 .details h1 {
     font-size: 54px;
-    font-family: PopRegular;
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 .details h2 {
@@ -196,7 +183,8 @@ nav .menu {
 .storyDescription h3, .workDescription h3 {
     font-size: 30px;
     padding-bottom: 50px;
-    font-family: PopMedium;
+    font-family: 'Poppins';
+    font-weight: 500;
 }
 
 .storyDescription p, .workDescription p {
@@ -271,7 +259,8 @@ nav .menu {
     }
     .details h1 {
         font-size: 34px;
-        font-family: PopRegular;
+        font-family: 'Poppins';
+        font-weight: 400;
     }
     .details h2 {
         font-size: 24px;
